@@ -30,7 +30,7 @@ export class UploadProductPage extends Component {
         this.setState({ price: parseInt(event.currentTarget.value, 10) })
     }
 
-    handleChangeDecsription = (event) => {
+    handleChangeDescription = (event) => {
         // console.log(event.currentTarget.value)
         this.setState({ description: event.currentTarget.value })
     }

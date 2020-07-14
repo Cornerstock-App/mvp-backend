@@ -1,5 +1,6 @@
-1. make dev.js file inside config folder 
-2. put mongoDB info into dev.js file 
+The SERVER folder contains the backend of the project
+
+database connection is on the config folder under SERVER
 
 
 

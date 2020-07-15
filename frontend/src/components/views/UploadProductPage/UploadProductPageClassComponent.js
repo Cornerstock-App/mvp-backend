@@ -103,7 +103,7 @@ export class UploadProductPage extends Component {
                     value={this.state.description}
                 />
                 <br /><br />
-                <label>Price($)</label>
+                <label>Price(GH₵)</label>
                 <Input
                     type="number"
                     onChange={this.handleChangePrice}

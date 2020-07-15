@@ -11,13 +11,17 @@
 .menu__logo {
   width: 150px;
   float: left;
-  color: #e8e8e8;
+  /* color: #e8e8e8; */
 }
 
 .menu__logo a {
   display: inline-block;
   font-size: 20px;
   padding: 19px 20px;
+  color: #e8e8e8;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Open Sans', sans-serif;
+  font-style: inherit;
+  font-size: 22px;
 }
 
 .menu__container .ant-menu-item {
@@ -51,7 +55,7 @@
   padding: 6px;
   margin-top: 8px;
   display: none !important; /* use of important to overwrite ant-btn */
-  background: #3e91f7;
+  background: #FF4F00;
 }
 
 .menu_drawer .ant-drawer-body {

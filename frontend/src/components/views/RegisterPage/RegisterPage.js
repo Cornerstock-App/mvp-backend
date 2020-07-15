@@ -187,9 +187,19 @@ function RegisterPage(props) {
               </Form.Item>
 
               <Form.Item {...tailFormItemLayout}>
-                <Button onClick={handleSubmit} type="primary" disabled={isSubmitting}>
-                  Submit
+                <Button onClick={handleSubmit} 
+                type="primary" 
+                style={{ 
+                    minWidth: '100%', 
+                    background: '#FF4F00'
+                    }} 
+                disabled={isSubmitting}>
+                  Register
                 </Button>
+                Already have an account? <a href="/login"
+                style={{
+                  color: '#FF4F00'
+                }}>Login</a>
               </Form.Item>
             </Form>
           </div>

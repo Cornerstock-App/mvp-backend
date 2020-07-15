@@ -99,7 +99,7 @@ function UploadProductPage(props) {
                 />
                 <br />
                 <br />
-                <label>Price($)</label>
+                <label>Price(GH₵)</label>
                 <Input
                     onChange={onPriceChange}
                     value={PriceValue}

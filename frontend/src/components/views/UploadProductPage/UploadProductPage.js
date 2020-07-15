@@ -16,7 +16,7 @@ function UploadProductPage(props) {
 
     const [TitleValue, setTitleValue] = useState("")
     const [DescriptionValue, setDescriptionValue] = useState("")
-    const [PriceValue, setPriceValue] = useState(0)
+    const [PriceValue, setPriceValue] = useState()
     const [ShopValue, setShopValue] = useState(1)
 
     const [Images, setImages] = useState([])
@@ -72,8 +72,14 @@ function UploadProductPage(props) {
     }
 
     return (
-        <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <div style={{ 
+            maxWidth: '700px', 
+            margin: '2rem auto' 
+            }}>
+            <div style={{ 
+                textAlign: 'center', 
+                marginBottom: '2rem' 
+                }}>
                 <Title level={2}> Upload Product</Title>
             </div>
 
@@ -105,10 +111,14 @@ function UploadProductPage(props) {
                     value={PriceValue}
                     type="number"
                 />
-                <br /><br />
-                <select onChange={onShopsSelectChange} value={ShopValue}>
+                <br/>
+                <br/>
+                <select onChange={onShopsSelectChange} 
+                value={ShopValue}>
                     {shops.map(item => (
-                        <option key={item.key} value={item.key}>{item.value} </option>
+                        <option key={item.key} 
+                        value={item.key}>{item.value} 
+                        </option>
                     ))}
                 </select>
                 <br />
@@ -116,8 +126,11 @@ function UploadProductPage(props) {
 
                 <Button
                     onClick={onSubmit}
+                    style={{ 
+                    background: '#FF4F00'
+                    }} 
                 >
-                    Submit
+                    Add product
                 </Button>
 
             </Form>

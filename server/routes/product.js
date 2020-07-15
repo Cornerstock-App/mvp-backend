@@ -9,9 +9,11 @@ var storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/')
     },
+    
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}_${file.originalname}`)
     },
+
     fileFilter: (req, file, cb) => {
         const ext = path.extname(file.originalname)
         if (ext !== '.jpg' || ext !== '.png') {
@@ -21,7 +23,9 @@ var storage = multer.diskStorage({
     }
 })
 
-var upload = multer({ storage: storage }).single("file")
+var upload = multer({
+     storage: storage
+     }).single("file")
 
 // Product
 

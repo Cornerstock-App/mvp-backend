@@ -149,7 +149,7 @@ function LandingPage() {
     return (
         <div style={{
              width: '100%',
-             //margin: '3rem auto' 
+             margin: '3rem auto' 
              }}>
             <div style={{ 
                 width: '100%',
@@ -173,8 +173,8 @@ function LandingPage() {
                 <Col lg={12} xs={24} >
                     <CheckBox
                         list={shops}
-                        handleFilters={filters => handleFilters(filters, "Shops")}
-                    />
+                        handleFilters={filters => handleFilters(filters, "Shops")}>
+                    </CheckBox>
                 </Col>
                 <Col lg={12} xs={24}>
                     <RadioBox
@@ -216,12 +216,13 @@ function LandingPage() {
             <br /><br />
 
             {PostSize >= Limit &&
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div style={{ 
+                    display: 'flex', 
+                    justifyContent: 'center' 
+                    }}>
                     <button onClick={onLoadMore}>Load More</button>
                 </div>
             }
-
-
         </div>
     )
 }

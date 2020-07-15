@@ -76,6 +76,7 @@ function LandingPage() {
                 images={product.images} /></a>
                 }>
                 <Meta
+                images={product.images}
                     title={product.title}
                     description={`GH₵${product.price}`}
                 />
@@ -146,15 +147,28 @@ function LandingPage() {
 
 
     return (
-        <div style={{ width: '75%', margin: '3rem auto' }}>
-            <div style={{ textAlign: 'center' }}>
-                <h2>  Empowering local African businesses to make better <br/>
-                         decisions and grow their businesses </h2>
+        <div style={{
+             width: '100%',
+             //margin: '3rem auto' 
+             }}>
+            <div style={{ 
+                width: '100%',
+                height: "345px",
+                textAlign: 'center',
+                backgroundImage: "url(" + "https://thumbs.dreamstime.com/b/fruit-vegetable-shop-fruit-vegetable-shop-celle-ligure-savona-141310117.jpg" + ")"
+                }}>
+                
             </div>
+                
+                
+            <div style={{
+                textAlign: 'center'
+            }}>
+            <h2> Empowering local African businesses to make better <br/>
+                         decisions and grow their businesses</h2>
+                         </div>
 
-
-            {/* Filter  */}
-
+                {/* SEARCH FILTERS */}
             <Row gutter={[16, 16]}>
                 <Col lg={12} xs={24} >
                     <CheckBox
@@ -171,18 +185,22 @@ function LandingPage() {
             </Row>
 
 
-            {/* Search  */}
-            <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '1rem auto' }}>
-
-                <SearchFeature
-                    refreshFunction={updateSearchTerms}
-                />
-
+            {/* Search BAR */}
+            <div style={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                margin: '1rem auto' ,
+                }}>
+                <SearchFeature refreshFunction={updateSearchTerms} />
             </div>
 
 
             {Products.length === 0 ?
-                <div style={{ display: 'flex', height: '300px', justifyContent: 'center', alignItems: 'center' }}>
+                <div style={{ 
+                    display: 'flex', 
+                    height: '300px', 
+                    justifyContent: 'center', 
+                    alignItems: 'center' }}>
                     <h2>No products yet...</h2>
                 </div> :
                 <div>

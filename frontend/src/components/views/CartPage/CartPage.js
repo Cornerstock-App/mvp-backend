@@ -45,7 +45,6 @@ function CartPage(props) {
         setShowTotal(true)
     }
 
-
     const removeFromCart = (productId) => {
 
         dispatch(removeCartItem(productId))
@@ -78,7 +77,6 @@ function CartPage(props) {
     const transactionCanceled = () => {
         console.log('Transaction canceled')
     }
-
 
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
@@ -114,9 +112,6 @@ function CartPage(props) {
                         </div>
                 }
             </div>
-
-
-
             {/* Paypal Button */}
 
             {ShowTotal &&
@@ -127,11 +122,7 @@ function CartPage(props) {
                     transactionError={transactionError}
                     transactionCanceled={transactionCanceled}
                 />
-
             }
-
-
-
         </div>
     )
 }

@@ -156,11 +156,9 @@ function LandingPage() {
                 height: "345px",
                 textAlign: 'center',
                 backgroundImage: "url(" + "https://thumbs.dreamstime.com/b/fruit-vegetable-shop-fruit-vegetable-shop-celle-ligure-savona-141310117.jpg" + ")"
-                }}>
-                
+                }}>            
             </div>
-                
-                
+
             <div style={{
                 textAlign: 'center'
             }}>

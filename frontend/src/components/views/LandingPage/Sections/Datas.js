@@ -24,15 +24,8 @@ const price = [
         "_id": 4,
         "name": "GH₵280 to GH₵299",
         "array": [280, 299]
-    },
-    {
-        "_id": 5,
-        "name": "More than GH₵300",
-        "array": [300, 1500000]
     }
 ]
-
-
 
 const shops = [
     {

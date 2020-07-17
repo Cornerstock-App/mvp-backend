@@ -5,7 +5,16 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Form, Icon, Input, Button, Checkbox, Typography } from 'antd';
 import { useDispatch } from "react-redux";
+import SocialButton from './SocialButton'
 
+
+const handleSocialLogin = (user) => {
+  console.log(user)
+}
+
+const handleSocialLoginFailure = (err) => {
+  console.error(err)
+}
 const { Title } = Typography;
 
 function LoginPage(props) {
@@ -18,10 +27,12 @@ function LoginPage(props) {
   const handleRememberMe = () => {
     setRememberMe(!rememberMe)
   };
+  
 
   const initialEmail = localStorage.getItem("rememberMe") ? localStorage.getItem("rememberMe") : '';
 
   return (
+   
     <Formik
       initialValues={{
         email: initialEmail,
@@ -79,11 +90,21 @@ function LoginPage(props) {
           handleReset,
         } = props;
         return (
+
           <div className="app">
-
             <Title level={2}>Log In</Title>
+          <div>
+              <SocialButton
+              provider = 'facebook'
+              appId = '310792426741801'
+              onLoginSuccess = { handleSocialLogin }
+              onLoginFailure = { handleSocialLoginFailure }
+              >
+            Login with Facebook
+            </SocialButton>
+          </div>,
+      
             <form onSubmit={handleSubmit} style={{ width: '350px' }}>
-
               <Form.Item required>
                 <Input
                   id="email"

@@ -38,6 +38,18 @@ const userSchema = mongoose.Schema({
     token: {
         type: String,
     },
+    // facebookId: { 
+    //     type: String 
+    // },
+    // facebook: { 
+    //     type: mongooseClient.Schema.Types.Mixed
+    //  },
+    // googleId: { 
+    //     type: String
+    //  },
+    // google: { 
+    //     type: mongooseClient.Schema.Types.Mixed 
+    // },
     tokenExp: {
         type: Number
     }
